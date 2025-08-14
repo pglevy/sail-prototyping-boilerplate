@@ -25,7 +25,7 @@
 
   /* SAIL-mapped colors */
   --color-sail-standard: #000000;
-  --color-sail-accent: #1976d2;
+  --color-sail-accent: #2322F0;
   --color-sail-positive: #4caf50;
   --color-sail-negative: #f44336;
   --color-sail-secondary: #757575;
@@ -33,6 +33,7 @@
   --color-sail-bg-standard: #ffffff;
   --color-sail-bg-success: #e8f5e8;
   --color-sail-bg-error: #fdeaea;
+  --color-sail-border: #E0E0E0;
   
   /* Additional SAIL background colors from Appian mockup */
   --color-sail-bg-light: #fafafc;
@@ -49,7 +50,7 @@
   /* SAIL tab and navigation colors */
   --color-sail-tab-bg: #ffffff;
   --color-sail-tab-border: #e5e7eb;
-  --color-sail-tab-active: #1976d2;
+  --color-sail-tab-active: #2322F0;
   
   /* SAIL application header gradient - Appian brand colors */
   --gradient-sail-header-bg: linear-gradient(90deg, #2322f0 0%, #e21496 57%, #ffc008 83%, #ffd949 100%);
@@ -147,7 +148,7 @@
   .bg-sail-bg-200 { background-color: var(--color-sail-bg-200); }
 
   /* SAIL Border Colors */
-  .border-sail-standard { border-color: var(--color-sail-standard); }
+  .border-sail-standard { border-color: var(--color-sail-border); }
   .border-sail-accent { border-color: var(--color-sail-accent); }
   .border-sail-positive { border-color: var(--color-sail-positive); }
   .border-sail-negative { border-color: var(--color-sail-negative); }

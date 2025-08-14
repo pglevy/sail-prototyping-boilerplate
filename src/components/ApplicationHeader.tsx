@@ -11,7 +11,7 @@ export const ApplicationHeader: React.FC<ApplicationHeaderProps> = ({
   userInitials = "PL"
 }) => {
   return (
-    <div className="app-header-sail">
+    <div className="app-header-sail border-b border-sail-standard">
       <div className="flex items-center gap-3">
         <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
           <span className="text-blue-600 font-bold text-sm">A</span>
