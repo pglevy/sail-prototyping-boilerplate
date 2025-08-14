@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ApplicationHeader } from '../components'
 
 function SailDashboard() {
   const [activeTab, setActiveTab] = useState('overview')
@@ -29,6 +30,8 @@ function SailDashboard() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <ApplicationHeader />
+      
       {/* Header */}
       <header className="bg-sail-bg-standard border-b border-sail-secondary">
         <div className="max-w-7xl mx-auto px-sail-standard py-sail-standard">
