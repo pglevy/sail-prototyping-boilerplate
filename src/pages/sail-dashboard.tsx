@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import { ApplicationHeader } from '../components'
+import { ApplicationHeader, SideNav } from '../components'
 
 function SailDashboard() {
   const [activeTab, setActiveTab] = useState('overview')
+  const [selectedPage, setSelectedPage] = useState('plan')
 
   const projects = [
     { id: 1, name: 'Project Alpha', status: 'active', progress: 75, dueDate: '2024-01-15' },
@@ -29,29 +30,36 @@ function SailDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-sail-bg-page">
       <ApplicationHeader />
       
-      {/* Header */}
-      <header className="bg-sail-bg-standard border-b border-sail-secondary">
-        <div className="max-w-7xl mx-auto px-sail-standard py-sail-standard">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-sail-large-plus font-bold text-sail-standard">
-                Project Dashboard
-              </h1>
-              <p className="text-sail-standard text-sail-secondary">
-                Manage your projects and track progress
-              </p>
+      <div className="flex">
+        <SideNav 
+          selectedPage={selectedPage}
+          onPageChange={setSelectedPage}
+        />
+        
+        <div className="flex-1">
+          {/* Header */}
+          <header className="bg-sail-bg-standard border-b border-sail-secondary">
+            <div className="max-w-7xl mx-auto px-sail-standard py-sail-standard">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h1 className="text-sail-large-plus font-bold text-sail-standard">
+                    Project Dashboard
+                  </h1>
+                  <p className="text-sail-standard text-sail-secondary">
+                    Manage your projects and track progress
+                  </p>
+                </div>
+                <button className="bg-sail-accent text-white px-sail-standard py-sail-less rounded-sail-semi-rounded text-sail-medium font-medium hover:opacity-90">
+                  New Project
+                </button>
+              </div>
             </div>
-            <button className="bg-sail-accent text-white px-sail-standard py-sail-less rounded-sail-semi-rounded text-sail-medium font-medium hover:opacity-90">
-              New Project
-            </button>
-          </div>
-        </div>
-      </header>
+          </header>
 
-      <div className="max-w-7xl mx-auto px-sail-standard py-sail-more">
+          <div className="max-w-7xl mx-auto px-sail-standard py-sail-more">
         {/* Tabs */}
         <div className="mb-sail-more">
           <div className="border-b border-sail-secondary">
@@ -214,6 +222,8 @@ function SailDashboard() {
             </div>
           </div>
         )}
+          </div>
+        </div>
       </div>
     </div>
   )
