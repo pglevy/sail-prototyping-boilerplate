@@ -37,7 +37,7 @@ function Home() {
           Check out the <Link to="demo/button-demo" className="text-sail-accent underline">Button</Link> and <Link to="demo/form-demo" className="text-sail-accent underline">Form</Link> demo pages.
         </p>
         <p className="mt-sail-less text-sail-standard">
-          View <Link to="sail-examples" className="text-sail-accent underline">SAIL Examples</Link> or <Link to="process-list" className="text-sail-accent underline">Process Dashboard</Link>.
+          View <Link to="sail-examples" className="text-sail-accent underline">SAIL Components</Link> or <Link to="sail-dashboard" className="text-sail-accent underline">SAIL Dashboard</Link>.
         </p>
       </div>
     </>
